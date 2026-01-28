@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Guitar {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  type        String
+  year        Int
+  description String   @db.Text
+  imageUrl    String
+  videoId     String
+  price       Int
+  body        String
+  neck        String
+  pickups     String
+  hardware    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
