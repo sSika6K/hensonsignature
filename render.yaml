@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hensonsignature
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
