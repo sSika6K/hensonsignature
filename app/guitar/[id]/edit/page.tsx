@@ -10,7 +10,7 @@ export default async function EditGuitarPage({ params }: PageProps) {
   const { id } = await params;
   const guitarId = Number(id);
 
-  if (Number.isNaN(guitarId)) {
+  if (!Number.isInteger(guitarId) || guitarId <= 0) {
     notFound();
   }
 
