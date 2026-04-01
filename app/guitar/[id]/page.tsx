@@ -27,7 +27,7 @@ export default async function GuitarDetail({ params }: PageProps) {
     <div className="min-h-screen bg-black text-white">
       <header className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4">
+          <Link href="/collection" className="flex items-center gap-4">
             <div className="w-16 h-16 relative">
               <Image
                 src="/timsignaturepurplefade.png"
@@ -41,7 +41,7 @@ export default async function GuitarDetail({ params }: PageProps) {
             </span>
           </Link>
           <Link
-            href="/"
+            href="/collection"
             className="text-xs tracking-widest hover:text-purple-400 transition-colors"
           >
             ← BACK
