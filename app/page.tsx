@@ -46,13 +46,6 @@ export default async function Home() {
               Signature Guitar Series
             </p>
           </div>
-
-          <Link
-            href="/manage"
-            className="inline-flex md:hidden items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 transition-colors text-sm tracking-widest uppercase"
-          >
-            Gestion
-          </Link>
         </div>
 
         <div className="max-w-[1400px] mx-auto px-6 pb-24">

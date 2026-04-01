@@ -40,20 +40,12 @@ export default async function GuitarDetail({ params }: PageProps) {
               SIGNATURE COLLECTION
             </span>
           </Link>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/guitar/new"
-              className="text-xs tracking-widest hover:text-purple-400 transition-colors"
-            >
-              + ADD
-            </Link>
-            <Link
-              href="/"
-              className="text-xs tracking-widest hover:text-purple-400 transition-colors"
-            >
-              ← BACK
-            </Link>
-          </div>
+          <Link
+            href="/"
+            className="text-xs tracking-widest hover:text-purple-400 transition-colors"
+          >
+            ← BACK
+          </Link>
         </div>
       </header>
 
