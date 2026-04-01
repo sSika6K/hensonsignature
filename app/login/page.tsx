@@ -53,7 +53,7 @@ export default function LoginPage() {
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Armand"
+              placeholder="Utilisateur"
               className="w-full p-4 bg-black border border-white/10 rounded-lg outline-none focus:border-purple-500"
               autoComplete="username"
             />

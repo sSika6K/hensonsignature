@@ -81,7 +81,7 @@ export async function GET() {
     });
 
     return NextResponse.json(guitars);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         status: "error",
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json(guitar, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         status: "error",

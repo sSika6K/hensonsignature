@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 type Guitar = {
   id: number;
@@ -15,15 +16,23 @@ type Props = {
 };
 
 export default function ManageActions({ guitars }: Props) {
+  const [loading, setLoading] = useState(false);
+
   const handleDelete = async (id: number) => {
     const confirmed = window.confirm("Supprimer cette guitare ?");
     if (!confirmed) return;
 
-    await fetch(`/api/guitars/${id}`, {
-      method: "DELETE",
-    });
+    setLoading(true);
 
-    window.location.reload();
+    try {
+      await fetch(`/api/guitars/${id}`, {
+        method: "DELETE",
+      });
+
+      window.location.reload();
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleLogout = async () => {
@@ -35,7 +44,7 @@ export default function ManageActions({ guitars }: Props) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-10">
       <div className="flex justify-end">
         <button
           onClick={handleLogout}
@@ -73,7 +82,8 @@ export default function ManageActions({ guitars }: Props) {
               </Link>
               <button
                 onClick={() => handleDelete(guitar.id)}
-                className="px-4 py-2 bg-red-600 hover:bg-red-500 transition-colors text-sm"
+                disabled={loading}
+                className="px-4 py-2 bg-red-600 hover:bg-red-500 disabled:opacity-50 transition-colors text-sm"
               >
                 Supprimer
               </button>

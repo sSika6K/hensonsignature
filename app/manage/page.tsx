@@ -30,12 +30,21 @@ export default async function ManagePage() {
             </p>
           </div>
 
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 transition-colors text-sm tracking-widest uppercase"
-          >
-            ← Retour à la collection
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 transition-colors text-sm tracking-widest uppercase"
+            >
+              ← Retour à la collection
+            </Link>
+
+            <Link
+              href="/guitar/new"
+              className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-500 transition-colors text-sm tracking-widest uppercase"
+            >
+              + Ajouter une guitare
+            </Link>
+          </div>
         </div>
 
         <ManageActions guitars={guitars} />
