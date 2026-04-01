@@ -1,9 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
-  <rect width="800" height="1200" fill="#18181b"/>
-  <g transform="translate(400,600)">
-    <!-- Guitar body -->
-    <ellipse cx="0" cy="100" rx="200" ry="180" fill="#8B7355" opacity="0.8"/>
-    <rect x="-30" y="-350" width="60" height="450" fill="#8B7355" opacity="0.9"/>
-    <text x="0" y="300" text-anchor="middle" fill="white" font-size="48" font-family="Arial">TOD10NL</text>
-  </g>
-</svg>
